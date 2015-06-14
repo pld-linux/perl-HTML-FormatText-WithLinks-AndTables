@@ -8,13 +8,13 @@
 Summary:	HTML::FormatText::WithLinks::AndTables - Converts HTML to Text with tables in tact
 Summary(pl.UTF-8):	HTML::FormatText::WithLinks::AndTables - konwersja HTML-a do tekstu z tabelkami
 Name:		perl-HTML-FormatText-WithLinks-AndTables
-Version:	0.02
+Version:	0.06
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/HTML/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	804146aa9e49a5b1af4f63fecd9b0c28
+# Source0-md5:	bd214ca080379cc09f0b2eef62bf3d0f
 URL:		http://search.cpan.org/dist/HTML-FormatText-WithLinks-AndTables/
 BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -53,7 +53,7 @@ wewnątrz elementu <TD> - pod warunkiem, że jest złamany przy użyciu
 znaczników <BR/>.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 %{__perl} Makefile.PL \
@@ -73,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes README.pod
 %dir %{perl_vendorlib}/HTML/FormatText/WithLinks
 %{perl_vendorlib}/HTML/FormatText/WithLinks/AndTables.pm
 %{_mandir}/man3/HTML::FormatText::WithLinks::AndTables.3pm*
