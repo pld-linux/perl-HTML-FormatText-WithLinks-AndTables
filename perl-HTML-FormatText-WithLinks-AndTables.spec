@@ -68,12 +68,16 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# duplicate of HTML::FormatText::WithLinks::AndTables docs (already included pm and man)
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/HTML/FormatText/WithLinks/README.pod \
+	$RPM_BUILD_ROOT%{_mandir}/man3/HTML::FormatText::WithLinks::README.3pm
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README.pod
+%doc Changes
 %dir %{perl_vendorlib}/HTML/FormatText/WithLinks
 %{perl_vendorlib}/HTML/FormatText/WithLinks/AndTables.pm
 %{_mandir}/man3/HTML::FormatText::WithLinks::AndTables.3pm*
