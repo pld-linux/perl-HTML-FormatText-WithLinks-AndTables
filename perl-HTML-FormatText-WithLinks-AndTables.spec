@@ -4,7 +4,6 @@
 #
 %define		pdir	HTML
 %define		pnam	FormatText-WithLinks-AndTables
-%include	/usr/lib/rpm/macros.perl
 Summary:	HTML::FormatText::WithLinks::AndTables - Converts HTML to Text with tables in tact
 Summary(pl.UTF-8):	HTML::FormatText::WithLinks::AndTables - konwersja HTML-a do tekstu z tabelkami
 Name:		perl-HTML-FormatText-WithLinks-AndTables
