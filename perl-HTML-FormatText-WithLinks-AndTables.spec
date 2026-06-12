@@ -8,7 +8,7 @@ Summary:	HTML::FormatText::WithLinks::AndTables - Converts HTML to Text with tab
 Summary(pl.UTF-8):	HTML::FormatText::WithLinks::AndTables - konwersja HTML-a do tekstu z tabelkami
 Name:		perl-HTML-FormatText-WithLinks-AndTables
 Version:	0.07
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -66,9 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-# duplicate of HTML::FormatText::WithLinks::AndTables docs (already included pm and man)
-%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/HTML/FormatText/WithLinks/README.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
